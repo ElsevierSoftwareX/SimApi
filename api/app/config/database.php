@@ -52,12 +52,19 @@ return array(
 			'prefix'   => '',
 		),
 
-		'mysql' => array(
-			'driver'    => 'mysql',
-			'host'      => 'resit-db.ucd.ie',
+		/*
+		'host'      => 'resit-db.ucd.ie',
 			'database'  => 'simapi_db1',
 			'username'  => 'simapiuser',
 			'password'  => 'pg31bd2!',
+		*/
+
+		'mysql' => array(
+			'driver'    => 'mysql',
+			'host'      => 'localhost',
+			'database'  => 'simapi',
+			'username'  => 'dbuser',
+			'password'  => '123',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

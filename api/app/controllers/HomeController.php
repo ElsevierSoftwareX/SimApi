@@ -17,7 +17,9 @@ class HomeController extends BaseController {
 
 	public function showWelcome()
 	{
+		Cache::flush();
 		return View::make('hello');
+
 	}
 
 }

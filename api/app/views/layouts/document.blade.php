@@ -6,7 +6,7 @@
     <h1@@end_of_comment
     <h1>
       <b class="Style">
-        SImulAPi
+        SimulAPi
       </b>
     </h1@@end_of_comment
       <h1>
@@ -24,7 +24,7 @@
       </strong>
       for developers to use and get data from 
       <strong>
-        BCTVB
+        Energy Plus
       </strong>
     </p>
     <hr class="divider">

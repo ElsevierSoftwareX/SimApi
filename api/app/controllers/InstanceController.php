@@ -9,6 +9,13 @@ class InstanceController extends BaseController {
 
 	   // return View::make('instance.create_instance',array('user'=>$user));
 	 }
+
+	 public function createInstanceWeb(){
+	 	$userId = Auth::user()->idUser;
+	 	$newinst = $this->postCreate($userId)->getData();
+	 	return Redirect::intended('/')->with('flash_message','New instance '.$newinst->instance_id.' created');
+
+	 }
      public function postCreate($user_id){
 	 
 	 	/*$user = User::find($username);
@@ -48,4 +55,19 @@ class InstanceController extends BaseController {
 	    $instance = Instance::find($id);
 		return $instance->begin;	
 	}
+
+	public function showForm(){
+		$user = Auth::user()->idUser;
+		return View::make('instance.create_instance',array("user"=>$user));
+	   
+	}
+
+	public function beginSimulation(){
+		$user = Auth::user()->idUser; 
+		$instances=Instance::where('User_idUser', '=', $user)->get();
+		return View::make('instance.begin',array("user"=>$user,"instances"=>$instances));
+	   
+	}
+
+	
 }

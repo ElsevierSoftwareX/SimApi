@@ -66,6 +66,16 @@ Route::group(array('before'=>'auth'),function(){
 	       'as'=>'logout',
 		   'uses'=>'AccountsController@logout'
 	  )); 
+
+	  Route::get('/create_instance',array(
+	       'as'=>'form-create-instance',
+		   'uses'=>'InstanceController@showForm'
+	    ));
+
+	  Route::post('/new-instance',array(
+	       'as'=>'new-instance',
+		   'uses'=>'InstanceController@createInstanceWeb'
+	    ));
 });
 
 /*

@@ -1,10 +1,10 @@
-@extends('layouts.instance')
+@extends('layouts.default')
 
 @section('content')
 
-    Hello there
+    
 	
-    {{ Form::open(array('route' => 'create-instance-put')) }}
+    {{ Form::open(array('url' => route('new-instance', $user), 'method' => 'POST')) }}
      <ul>
 
      <li>
