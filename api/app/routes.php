@@ -76,6 +76,15 @@ Route::group(array('before'=>'auth'),function(){
 	       'as'=>'new-instance',
 		   'uses'=>'InstanceController@createInstanceWeb'
 	    ));
+
+	  Route::get('/select-instance',array(
+	       'as'=>'begin-instance-form',
+		   'uses'=>'InstanceController@beginSimulationForm'
+	    ));
+	  Route::get('/show-results/{instance_id}',array(
+	       'as'=>'results-instance',
+		   'uses'=>'SensorController@getSensorInstance'
+	    ));
 });
 
 /*
@@ -147,6 +156,7 @@ Route::group(array('before' =>'guest'),function(){
 	    'as' =>'accounts-recover',
 	    'uses'=>'AccountsController@getRecover'
 	 ));
+
 	  Route::get('/accounts/activate/{code}',array(
        'as'  =>'activate',
 	   'uses'=>'AccountsController@getActivate'

@@ -31,4 +31,15 @@ public function getSensor($instance_id,$sensor_id,$timestep_id)
 		  return "Sensor Not found"; 
   		
 	}
+
+	public function getSensorInstance($instance_id)
+	{   
+	    $results =  DB::table('Sensor')
+		->where('Timestep_Instance_idInstance', $instance_id)
+		->lists('Timestep_idTimestep','Environment','StorageTankHeating1');
+
+		var_dump($results); exit(0);
+		return View::make('instance.results',array("instance"=>$instance_id,"results"=>$results));
+  		
+	}
 }

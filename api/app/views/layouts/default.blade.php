@@ -24,6 +24,7 @@
 <link href="{{ URL::asset('assets/global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css') }}" rel="stylesheet" type="text/css"/>
 <link href="{{ URL::asset('assets/global/plugins/fullcalendar/fullcalendar/fullcalendar.css') }}" rel="stylesheet" type="text/css"/>
 <link href="{{ URL::asset('assets/global/plugins/jqvmap/jqvmap/jqvmap.css') }}" rel="stylesheet" type="text/css"/>
+<link href="{{ URL::asset('assets/global/plugins/nouislider/jquery.nouislider.css') }}" rel="stylesheet" type="text/css"/>
 <!-- END PAGE LEVEL PLUGIN STYLES -->
 <!-- BEGIN PAGE STYLES -->
 <link href="{{ URL::asset('assets/admin/pages/css/tasks.css') }}" rel="stylesheet" type="text/css"/>
@@ -48,26 +49,26 @@
 <!-- DOC: Apply "page-footer-fixed" class to the body element to have fixed footer -->
 <!-- DOC: Apply "page-sidebar-reversed" class to put the sidebar on the right side -->
 <!-- DOC: Apply "page-full-width" class to the body element to have full width page without the sidebar menu -->
-<body class="page-header-fixed page-sidebar page-container-bg-solid">
+<body class="page-header-fixed page-quick-sidebar-over-content">
+
 <!-- BEGIN HEADER -->
 <div class="page-header navbar navbar-fixed-top">
   <!-- BEGIN HEADER INNER -->
   <div class="page-header-inner">
+    <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+    <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+    
+    <!-- END RESPONSIVE MENU TOGGLER -->
     <!-- BEGIN LOGO -->
     <div class="page-logo">
       <a class="navbar-brand font-red" href="{{ URL::route('home') }}"><i class="fa fa fa-fire fa-lg fa-2x"></i>&nbsp;SIMAPI</a>
     </div>
     <!-- END LOGO -->
-    <!-- BEGIN RESPONSIVE MENU TOGGLER -->
-    <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
-    <!-- END RESPONSIVE MENU TOGGLER -->
     <!-- BEGIN TOP NAVIGATION MENU -->
     <div class="top-menu">
-      <ul class="nav navbar-nav pull-left">
-        <li><a href="{{URL::route('document')}}" class="font-red">API Documentation</a></li>
-    <li><a href="http://docs.simulapi.apiary.io/" class="font-red">API Blueprint</a></li>
-      </ul>
       <ul class="nav navbar-nav pull-right">
+        <li><a href="{{URL::route('document')}}" class="font-red">API Documentation</a></li>
+        <li><a href="http://docs.simulapi.apiary.io/" class="font-red">API Blueprint</a></li>
         <!-- BEGIN NOTIFICATION DROPDOWN -->
         <li class="dropdown dropdown-extended dropdown-notification" id="header_notification_bar">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
@@ -79,19 +80,26 @@
             <li>
               <ul class="dropdown-menu-list scroller" style="height: 250px;">
 
-        @if(Auth::check())
-        <li><a href="{{URL::route('accounts-logout')}}">Sign out</a></li>
-        <li><a href="{{URL::route('accounts-change-password')}}">Change Password</a></li>
-        @else
-        <li><a href="{{URL::route('accounts-login')}}">Sign in</a></li>
-        <li><a href="{{URL::route('accounts-create')}}">Sign up</a></li>
-        <li><a href="{{URL::route('accounts-forgot')}}">Forgot password</a></li>
-        @endif
+                  @if(Auth::check())
+                  <li><a href="{{URL::route('accounts-logout')}}">Sign out</a></li>
+                  <li><a href="{{URL::route('accounts-change-password')}}">Change Password</a></li>
+                  @else
+                  <li><a href="{{URL::route('accounts-login')}}">Sign in</a></li>
+                  <li><a href="{{URL::route('accounts-create')}}">Sign up</a></li>
+                  <li><a href="{{URL::route('accounts-forgot')}}">Forgot password</a></li>
+                  @endif
+            </ul>
+          </li>
+        </ul>
         </ul>
 
     </div>
+  </div>
+</div>
 <div class="clearfix">
 </div>
+<!-- BEGIN CONTAINER -->
+<div class="page-container">
   <!-- BEGIN SIDEBAR -->
   <div class="page-sidebar-wrapper">
     <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
@@ -101,70 +109,77 @@
         <!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
         <li class="sidebar-toggler-wrapper">
           <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
-          <div class="sidebar-toggler">
-          </div>
+          <div class="sidebar-toggler"></div>
           <!-- END SIDEBAR TOGGLER BUTTON -->
         </li>
-        <li class="start active open">
+        <li class="active">
           <a href="javascript:;">
           <i class="icon-home"></i>
-          
+          <span class="title">Home</span>
+          <span class="arrow "></span>
           </a>
+
            @if(Auth::check())
           <ul class="sub-menu">
             <li>
               <a href="{{ URL::route('form-create-instance') }}">
               <i class="icon-bar-chart"></i>
-              Create Instance</a>
+              <span class="title">Create Instance</span></a>
             </li>
             <li>
-              <a href="{{ URL::route('postbegin') }}">
+              <a href="{{ URL::route('begin-instance-form') }}">
               <i class="icon-bulb"></i>
-              Begin Simulation</a>
+              <span class="title">Begin Simulation</span></a>
             </li>
             <li class="active">
               <a href="">
               <i class="icon-graph"></i>
-              Export Data</a>
+              <span class="title">Export Data</span></a>
             </li>
           </ul>
           @endif
         </li>
-        <li>
+
       </ul>
-        </div>
+    </div>
   </div>
-  <!-- END SIDEBAR -->
+<!-- END SIDEBAR -->
+  
   <!-- BEGIN CONTENT -->
   <div class="page-content-wrapper">
     <div class="page-content">
-     <div class="container">
+     <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
       @if (Session::get('flash_message'))
               <div class="Metronic-alerts alert-success fade in"></br>
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
                 &nbsp;&nbsp;&nbsp;&nbsp;{{ Session::get('flash_message') }}</br></br></div>
-                  
-      @endif
-       @yield('content')
+       @endif
      </div>
+
      @if(Session::has('global'))
      <p>
        {{ Session::get('global')}}
      </p>
      @endif   
-     <hr />
-
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid --> 
+    
+    </div>
+<div class="row">
+       @yield('content')
+</div>
+  
 <div class="page-footer">
   <div class="page-footer-inner">
      2014 &copy; Electricity Research Centre 
   </div>
   <div class="page-footer-tools">
     <span class="go-top">
-    <i class="fa fa-angle-up"></i>
+    <i class="fa fa-angle-up green"></i>
     </span>
   </div>
+</div>
+</div>
+</div>
 </div>
 <!-- END FOOTER -->
 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
@@ -204,6 +219,7 @@
 <script src="{{ URL::asset('assets/global/plugins/jquery-easypiechart/jquery.easypiechart.min.js') }}" type="text/javascript"></script>
 <script src="{{ URL::asset('assets/global/plugins/jquery.sparkline.min.js') }}" type="text/javascript"></script>
 <script src="{{ URL::asset('assets/global/plugins/gritter/js/jquery.gritter.js') }}" type="text/javascript"></script>
+<script src="{{ URL::asset('assets/global/plugins/nouislider/jquery.nouislider.min.js') }}"></script>
 <!-- END PAGE LEVEL PLUGINS -->
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
 <script src="{{ URL::asset('assets/global/scripts/metronic.js') }}" type="text/javascript"></script>
@@ -211,12 +227,17 @@
 <script src="{{ URL::asset('assets/admin/layout/scripts/quick-sidebar.js') }}" type="text/javascript"></script>
 <script src="{{ URL::asset('assets/admin/pages/scripts/index.js') }}" type="text/javascript"></script>
 <script src="{{ URL::asset('assets/admin/pages/scripts/tasks.js') }}" type="text/javascript"></script>
+<script src="{{ URL::asset('assets/admin/pages/scripts/components-nouisliders.js') }}"></script>
+<script src="{{ URL::asset('assets/global/plugins/select2/select2.min.js') }}"></script>
+<script src="{{ URL::asset('assets/global/plugins/datatables/media/js/jquery.dataTables.min.js') }}"></script>
+<script src="{{ URL::asset('assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js') }}"></script>
+<script src="{{ URL::asset('assets/admin/pages/scripts/table-managed.js') }}"></script>
 <!-- END PAGE LEVEL SCRIPTS -->
 <script>
 jQuery(document).ready(function() {    
    Metronic.init(); // init metronic core componets
    Layout.init(); // init layout
-   //QuickSidebar.init() // init quick sidebar
+   QuickSidebar.init() // init quick sidebar
    Index.init();   
    //Index.initDashboardDaterange();
    Index.initCalendar(); // init index page's custom scripts
@@ -225,6 +246,10 @@ jQuery(document).ready(function() {
    //Index.initMiniCharts();
    //Index.initIntro();
    Tasks.initDashboardWidget();
+   try {
+   ComponentsNoUiSliders.init();
+ } catch(error) {};
+    TableManaged.init();
 });
 </script>
 <!-- END JAVASCRIPTS -->

@@ -62,9 +62,12 @@ class InstanceController extends BaseController {
 	   
 	}
 
-	public function beginSimulation(){
+	public function beginSimulationForm(){
 		$user = Auth::user()->idUser; 
 		$instances=Instance::where('User_idUser', '=', $user)->get();
+
+		/* This should go in a transformer */
+
 		return View::make('instance.begin',array("user"=>$user,"instances"=>$instances));
 	   
 	}
