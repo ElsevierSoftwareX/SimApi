@@ -5,7 +5,7 @@
 						<div class="portlet-title">
 							<div class="caption">
 								<i class="icon-bar-chart font-green-sharp hide"></i>
-								<span class="caption-subject font-green-sharp bold uppercase">Energy Plus is a fantastic tool, but ... </span>
+								<span class="caption-subject font-green-sharp bold uppercase">Energy Plus made Web Friendly </span>
 							</div>
 						</div>
 						<div class="portlet-body">

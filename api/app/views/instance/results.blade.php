@@ -5,7 +5,7 @@
 						<div class="portlet-title">
 							<div class="caption">
 								<i class="fa fa-play font-green-sharp"></i>
-								<span class="caption-subject font-green-sharp ">Energy Plus Simulation </span>
+								<span class="caption-subject font-green-sharp ">Energy Plus Simulation {{ $instance }}</span>
 								<span class="caption-helper">results</span>
 							</div>
 						</div>
@@ -43,20 +43,21 @@
 									<input type="checkbox" class="group-checkable" data-set="#sample_1 .checkboxes"/>
 								</th>
 								<th>
-									 {{ $instance }}
+									 Timestep
 								</th>
 								<th>
-									 Email
+									 Outdoor Temp
 								</th>
 								<th>
-									 Points
+									 Storage Tank Temp
 								</th>
 								<th>
-									 Joined
+									 Bedroom Temp
 								</th>
 								<th>
-									 Status
+									 Electricity Consumption J
 								</th>
+								
 							</tr>
 							</thead>
 							<tbody>
@@ -66,24 +67,23 @@
 									<input type="checkbox" class="checkboxes" value="1"/>
 								</td>
 								<td>
-									{{ $result["StorageTankHeating1"] }}
+									{{ $result->Timestep_idTimestep }}
 									 
 								</td>
 								<td>
-									{{ $result["Environment"] }}
+									 {{ $result->Environment }}
 									
 								</td>
 								<td>
-									{{ $result["StorageTankHeating1"] }}
-									 
-								</td>
-								<td class="center">
-									{{ $result["EMS_BuildingConsumption"] }}
+									{{  $result->StorageTankHeating1 }}
 									 
 								</td>
 								<td>
-									<span class="label label-sm label-warning">
-									{{ $result["Bedroom1"] }} </span>
+									 {{ $result->Bedroom1  }}
+								</td>
+								<td class="center">
+									{{  $result->EMS_BuildingConsumption }}
+									 
 								</td>
 							</tr>
 							@endforeach
