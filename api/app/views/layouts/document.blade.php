@@ -16,7 +16,7 @@
     
     <p>
       <strong>
-        SImulAPi
+        SimulAPi
       </strong>
       is designed to make it 
       <strong>

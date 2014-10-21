@@ -40,7 +40,26 @@ class InstanceController extends BaseController {
 	    return Response::json(array('instance_id' => $response));
 	 }
 	 
-	 public function postbegin($instance_id){
+	 public function postSetbegin(){
+	 	$input = Input::get();
+	    $id=(int) $input["instance_id"];
+
+	    $action = Actions::create(array(
+		           'Timestep_idTimestep' =>1,
+				   'Timestep_Instance_idInstance'=>$input["instance_id"],
+				   'StorageTankSetPoint_Override'=>$input['TSetHea'],
+				   'CirculationPumpHeatLoop'=>1,
+		   ));
+	    $instance = Instance::find($id);
+		$instance->begin=1;
+		$instance->save();
+		return Response::json(array(
+		'Instance id' => $id,
+		'begin status'=>$instance->begin));
+	}
+
+
+	 public function postBegin($instance_id){
 	    $id=(int)$instance_id;
 	    $instance = Instance::find($id);
 		$instance->begin=1;

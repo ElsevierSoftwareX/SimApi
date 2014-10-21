@@ -85,6 +85,10 @@ Route::group(array('before'=>'auth'),function(){
 	       'as'=>'results-instance',
 		   'uses'=>'SensorController@getSensorInstance'
 	    ));
+	 Route::post('/begin-instance',array(
+	       'as'=>'postandsetbegin',
+		   'uses'=>'InstanceController@postSetBegin'
+	    ));
 });
 
 /*

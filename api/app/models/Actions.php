@@ -31,8 +31,8 @@ class Actions extends Eloquent implements UserInterface, RemindableInterface {
 	*/
 	
     protected $fillable = array(
-	'action','Timestep_idTimestep','Timstep_Instance_idInstance',
-	'TSetHea','TSetCoo');
+	'action','Timestep_idTimestep','Timestep_Instance_idInstance',
+	'StorageTankSetPoint_Override','CirculationPumpHeatLoop');
 
 	/*
 	Actions belongs to Timestep

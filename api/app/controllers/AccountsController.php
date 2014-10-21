@@ -121,13 +121,16 @@ class AccountsController extends BaseController {
 		 if($attempt){
 		
 		   //Redirect to the intended page
-		   
 		    return Redirect::intended('/')->with('flash_message','You have been logged in!');
-			 }else{
+
+			 }else
+			 {
 			 return Redirect::back()->with('flash_message','Email/password wrong ,or inactive account')->withInput();
 			 }
 		   }
+		   
 		   return Redirect::back()->with('flash_message','Invalid credentials')->withInput();
+		   
 		}
     
 	public function getlogout(){

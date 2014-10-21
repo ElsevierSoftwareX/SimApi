@@ -10,15 +10,16 @@
 							</div>
 						</div>
 						<div class="portlet-body">
-							{{ Form::open(array('route' => 'postbegin')) }}
+							{{ Form::open(array('route' => 'postandsetbegin')) }}
 							<div class="row">
 													<div class="col-md-6">
 														<div class="form-group">
 															<label class="control-label col-md-3">Instance</label>
 															<div class="col-md-9">
-																<select class="select2_category form-control" data-placeholder="Choose a Category" tabindex="1">
+
+																<select class="select2_category form-control" data-placeholder="Choose a Category" name="instance_id">
 																	@foreach ($instances as $instance)
-															 <option value="{{ $instance['idInstance'] }}"> {{ $instance["name"] }}</option>
+															 <option value="{{ $instance['idInstance'] }}"> {{ $instance["id"] }} {{ $instance["name"] }}</option>
 																	@endforeach
 																</select>
 															</div>
@@ -38,10 +39,10 @@
 											<div class="noUi-control noUi-danger" id="slider_2">
 											</div>
 											<div class="input-group input-medium margin-top-20">
-												<input id="slider_2_input_start" type="text" class="form-control" name="from">
+												<input id="slider_2_input_start" type="text" class="form-control" name="TSetHea">
 												<span class="input-group-addon">
 												to </span>
-												<input id="slider_2_input_end" type="text" class="form-control" name="to">
+												<input id="slider_2_input_end" type="text" class="form-control" name="TSetCoo">
 											</div>
 										</div>
 								</div>
