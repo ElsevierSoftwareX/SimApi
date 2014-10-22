@@ -219,6 +219,11 @@ Route::group(array('before' =>'guest'),function(){
 	       'as' => 'getSensor',	
 		   'uses' => 'SensorController@getSensor'
 	    ));
+
+	     Route::post('/get_lastdata',array(
+	       'as' => 'getSensorLastData',	
+		   'uses' => 'SensorController@getSensorLast'
+	    ));
 	 /*
       create instance(get)
       

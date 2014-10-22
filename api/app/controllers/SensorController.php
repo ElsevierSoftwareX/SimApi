@@ -32,6 +32,27 @@ public function getSensor($instance_id,$sensor_id,$timestep_id)
   		
 	}
 
+	public function getSensorLast($instance_id)
+	{   
+	    $sensor = DB::table('Sensor')
+		->where('Timestep_Instance_idInstance', $instance_id)
+		->orderBy('Timestep_idTimestep', 'DESC')
+		->take(10)->get();
+		if ($sensor){
+		  $TOut=$sensor->TOut;
+		  $TRoom=$sensor->TRoom;
+	      return Response::json(array(
+		  'StorageTankHeating1' => $sensor->StorageTankHeating1,
+	      'Timestep' => $sensor->Timestep_idTimestep,
+		  'Environment'=> $sensor->Environment,
+	      'Bedroom1' => $sensor->Bedroom1,
+		  'EMS_BuildingConsumption' => $sensor->EMS_BuildingConsumption
+		  ));
+		  }
+		  return "Sensor Not found"; 
+  		
+	}
+
 	public function getSensorInstance($instance_id)
 	{   
 	    $results =  DB::table('Sensor')->where('Timestep_Instance_idInstance', $instance_id)->take(100)->get();

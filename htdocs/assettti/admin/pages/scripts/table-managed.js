@@ -6,9 +6,7 @@ var TableManaged = function () {
 
         // begin first table
         table.dataTable({
-            "columns": [{
-                "orderable": false
-            }, {
+            "columns": [{ data:'Data1',"orderable": false}, {
                 "orderable": true
             }, {
                 "orderable": false

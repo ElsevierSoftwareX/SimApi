@@ -53,6 +53,7 @@ class InstanceController extends BaseController {
 	    $instance = Instance::find($id);
 		$instance->begin=1;
 		$instance->save();
+		return Redirect::route('getSensorLastData', $id);
 		return Response::json(array(
 		'Instance id' => $id,
 		'begin status'=>$instance->begin));
