@@ -38,7 +38,7 @@ public function getSensor($instance_id,$sensor_id,$timestep_id)
 		->where('Timestep_Instance_idInstance', $instance_id)
 		->orderBy('Timestep_idTimestep', 'DESC')
 		->take(10)->get();
-		
+		return $sensor;
 		
 		if ($sensor){
 		  $TOut=$sensor->TOut;
