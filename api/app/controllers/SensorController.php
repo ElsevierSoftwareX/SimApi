@@ -38,6 +38,8 @@ public function getSensor($instance_id,$sensor_id,$timestep_id)
 		->where('Timestep_Instance_idInstance', $instance_id)
 		->orderBy('Timestep_idTimestep', 'DESC')
 		->take(10)->get();
+		
+		
 		if ($sensor){
 		  $TOut=$sensor->TOut;
 		  $TRoom=$sensor->TRoom;
@@ -49,7 +51,7 @@ public function getSensor($instance_id,$sensor_id,$timestep_id)
 		  'EMS_BuildingConsumption' => $sensor->EMS_BuildingConsumption
 		  ));
 		  }
-		  return "Sensor Not found"; 
+		  return "END"; 
   		
 	}
 

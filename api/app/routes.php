@@ -220,7 +220,7 @@ Route::group(array('before' =>'guest'),function(){
 		   'uses' => 'SensorController@getSensor'
 	    ));
 
-	     Route::post('/get_lastdata',array(
+	     Route::get('/getsimlastdata/{instance_id}',array(
 	       'as' => 'getSensorLastData',	
 		   'uses' => 'SensorController@getSensorLast'
 	    ));
