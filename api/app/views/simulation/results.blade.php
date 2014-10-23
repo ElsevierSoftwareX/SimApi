@@ -94,7 +94,7 @@
 
 window.setInterval(function() {
 	$.ajax({
-		url: '/getlastdata/' + {{ $instance_id }},
+		url: '/getsimlastdata/' + {{ $instance_id }},
 	}).done(function(response) {
 		var rows = response.data;
 		console.log(rows);
