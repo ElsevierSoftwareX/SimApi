@@ -99,7 +99,7 @@ window.setInterval(function() {
                 console.log("Response as JS Object:") 
                 console.log(json);
             }
-	});
+	//});
 
 	//.done(function(response) {
 	//	var rows = response.data;
