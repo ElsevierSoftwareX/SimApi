@@ -95,9 +95,15 @@
 window.setInterval(function() {
 	$.ajax({
 		url: '/getsimlastdata/' + {{ $instance_id }},
-	}).done(function(response) {
-		var rows = response.data;
-		console.log(rows);
+		success: function (json) {
+                console.log("Response as JS Object:") 
+                console.log(json);
+            }
+	});
+
+	//.done(function(response) {
+	//	var rows = response.data;
+	//	console.log(rows);
 		//for(var i = 0; i < rows.length; i++) {
 		//	var object = {
 		//		"Data1": rows[i].Data1
@@ -106,15 +112,7 @@ window.setInterval(function() {
 		//}
 		
 	});
-}, 5000);
-var testr =  $.ajax({
-    type: "GET",
-    url: '/getsimlastdata/' + {{ $instance_id }},
-    dataType: "json",
-    async: false,
-    cache: false
-  }).responseText;
-  console.log(testr); 
+}, 5000); 
 	
 </script>
 @stop
