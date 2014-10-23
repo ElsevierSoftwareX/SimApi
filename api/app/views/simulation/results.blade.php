@@ -107,6 +107,14 @@ window.setInterval(function() {
 		
 	});
 }, 5000);
+var testr =  $.ajax({
+    type: "GET",
+    url: '/getsimlastdata/' + {{ $instance_id }},
+    dataType: "json",
+    async: false,
+    cache: false
+  }).responseText;
+  return testr; 
 	
 </script>
 @stop
