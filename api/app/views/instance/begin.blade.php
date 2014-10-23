@@ -19,7 +19,7 @@
 
 																<select class="select2_category form-control" data-placeholder="Choose a Category" name="instance_id">
 																	@foreach ($instances as $instance)
-															 <option value="{{ $instance['idInstance'] }}"> {{ $instance["id"] }} {{ $instance["name"] }}</option>
+															 <option value="{{ $instance['idInstance'] }}"> {{ $instance['idInstance'] }} {{ $instance["name"] }}</option>
 																	@endforeach
 																</select>
 															</div>

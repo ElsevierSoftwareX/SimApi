@@ -5,7 +5,7 @@
 						<div class="portlet-title">
 							<div class="caption">
 								<i class="fa fa-play font-green-sharp"></i>
-								<span class="caption-subject font-green-sharp ">Real Time Simulation {{ $instance }}</span>
+								<span class="caption-subject font-green-sharp ">Real Time Simulation {{ $instance_id }}</span>
 								<span class="caption-helper">results</span>
 							</div>
 						</div>
@@ -61,54 +61,49 @@
 							</tr>
 							</thead>
 							<tbody>
-							@foreach($results as $result)
 							<tr class="odd gradeX">
 								<td>
 									<input type="checkbox" class="checkboxes" value="1"/>
 								</td>
 								<td>
-									{{ $result->Timestep_idTimestep }}
+									NULL
 									 
 								</td>
 								<td>
-									 {{ $result->Environment }}
+									 NULL
 									
 								</td>
 								<td>
-									{{  $result->StorageTankHeating1 }}
+									NULL
 									 
 								</td>
 								<td>
-									 {{ $result->Bedroom1  }}
+									 NULL
 								</td>
 								<td class="center">
-									{{  $result->EMS_BuildingConsumption }}
+									NULL
 									 
 								</td>
 							</tr>
-							@endforeach
 							</tbody>
 							</table>
 						</div>
 	</div>
-{# [
-	data: {}	
-	
- ] #}
 
 <script>
 
 window.setInterval(function() {
 	$.ajax({
-		url: '/getlastdata/' + instance,
+		url: '/getlastdata/' + {{ $instance_id }},
 	}).done(function(response) {
 		var rows = response.data;
-		for(var i = 0; i < rows.length; i++) {
-			var object = {
-				"Data1": rows[i].Data1
-			};
-			$('sample1').dataTable().fnAddData(object);
-		}
+		console.log(rows);
+		//for(var i = 0; i < rows.length; i++) {
+		//	var object = {
+		//		"Data1": rows[i].Data1
+		//	};
+			//$('sample1').dataTable().fnAddData(object);
+		//}
 		
 	});
 }, 5000);

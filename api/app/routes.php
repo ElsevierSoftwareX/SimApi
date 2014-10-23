@@ -89,6 +89,11 @@ Route::group(array('before'=>'auth'),function(){
 	       'as'=>'postandsetbegin',
 		   'uses'=>'InstanceController@postSetBegin'
 	    ));
+
+	 Route::get('/siminprogress/{instance_id}', array(
+	       'as'=>'siminprogress',
+		   'uses'=>'InstanceController@simulationinprogress'
+	    ));
 });
 
 /*

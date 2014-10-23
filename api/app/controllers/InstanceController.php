@@ -53,10 +53,7 @@ class InstanceController extends BaseController {
 	    $instance = Instance::find($id);
 		$instance->begin=1;
 		$instance->save();
-		return Redirect::route('getSensorLastData', $id);
-		return Response::json(array(
-		'Instance id' => $id,
-		'begin status'=>$instance->begin));
+		return View::make('simulation.results',array('instance_id' => $id));
 	}
 
 
@@ -89,6 +86,14 @@ class InstanceController extends BaseController {
 		/* This should go in a transformer */
 
 		return View::make('instance.begin',array("user"=>$user,"instances"=>$instances));
+	   
+	}
+
+	public function simulationinprogress($instance_id){
+		
+		/* This should go in a transformer */
+
+		return View::make('simulation.results',array('instance_id' => $instance_id));
 	   
 	}
 
