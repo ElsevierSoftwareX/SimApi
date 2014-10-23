@@ -114,7 +114,7 @@ var testr =  $.ajax({
     async: false,
     cache: false
   }).responseText;
-  return testr; 
+  console.log(testr); 
 	
 </script>
 @stop
