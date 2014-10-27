@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('layouts.default_chart')
 
 @section('content')
 <div class="portlet light bg-inverse">
@@ -10,7 +10,10 @@
 							</div>
 						</div>
 						<div class="portlet-body">
-
+							<div id="containers" style="width: 510px; height: 400px; margin: 0 auto"></div>	
+							<br/>
+							<div id="Energycontainers" style="width: 510px; height: 400px; margin: 0 auto"></div>	
+							{{--
 							<div class="table-toolbar">
 								<div class="btn-group">
 									<button id="sample_editable_1_new" class="btn green">
@@ -87,18 +90,22 @@
 							</tr>
 							</tbody>
 							</table>
-						</div>
+						</div>--}}
 	</div>
 
 <script>
-
+var Objects = [], i;
 window.setInterval(function() {
 	$.ajax({
 		url: '/getsimlastdata/' + {{ $instance_id }},
 		success: function (json) {
-                console.log("Response as JS Object:") 
-                console.log(json);
-            }
+			for(i = 0; i < json.length; i++)
+			{
+				Objects.push(json[i]);
+			}
+			//console.log("Response as JS Object:") 
+			console.log(json);
+		}
 	//});
 
 	//.done(function(response) {
@@ -112,9 +119,11 @@ window.setInterval(function() {
 		//}
 		
 	});
-}, 5000); 
+}, 1000); 
 	
 </script>
+
+
 @stop
 															 
     
