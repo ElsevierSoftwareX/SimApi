@@ -33,7 +33,7 @@ class Sensor extends Eloquent implements UserInterface, RemindableInterface {
     protected $fillable = array(
 	'name','room','Timstep_Instance_idInstance',
 	'Timestep_idTimestep',
-	'TOut','TRoom','idSensor');
+	'TOut','TRoom','idSensor','checked');
 
 	/*
 	Actions belongs to Timestep

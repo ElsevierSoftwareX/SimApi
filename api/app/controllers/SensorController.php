@@ -36,6 +36,7 @@ public function getSensor($instance_id,$sensor_id,$timestep_id)
 	{   
 	    $sensor = DB::table('Sensor')
 		->where('Timestep_Instance_idInstance', $instance_id)
+		->where('checked', 0)
 		->orderBy('Timestep_idTimestep', 'DESC')
 		->take(3)->get();
 		
@@ -49,10 +50,15 @@ public function getSensor($instance_id,$sensor_id,$timestep_id)
 
 	public function getSensorInstance($instance_id)
 	{   
-	    $results =  DB::table('Sensor')->where('Timestep_Instance_idInstance', $instance_id)->take(100)->get();
+	    $results =  DB::table('Sensor')
+	    ->where('Timestep_Instance_idInstance', $instance_id)
+	    ->where('checked', 0)
+	    ->take(100)->get();
+	    
+		$affectedRows = Sensor::where('Timestep_Instance_idInstance', $instance_id)
+		->where('checked', 0)
+		->update(array('checked' => 1));
 		
-		
-		 
 		return View::make('instance.results',array("instance"=>$instance_id,"results"=>$results));
   		
 	}
