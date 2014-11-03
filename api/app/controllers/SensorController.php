@@ -48,18 +48,28 @@ public function getSensor($instance_id,$sensor_id,$timestep_id)
   		
 	}
 
-	public function getSensorInstance($instance_id)
+	public function getSensorInstance($instance_id,$resolution=4,$group=24)
 	{   
+		$group = Input::get('group');
+		$resolution = Input::get('resolution');
+		
+		
+		 
+		$hr=$group*(4-$resolution);
+		$ht=$resolution;
 	    $results =  DB::table('Sensor')
-	    ->where('Timestep_Instance_idInstance', $instance_id)
-	    ->where('checked', 0)
-	    ->take(100)->get();
+	    ->where('Timestep_Instance_idInstance',$instance_id)
+	    ->select('*', DB::raw('FLOOR((Timestep_idTimestep DIV ?) MOD ?) as Time,(((Timestep_idTimestep DIV ?) MOD ?)+(4 DIV ?)) DIV (4 DIV ?) as Hour, CASE WHEN Timestep_idTimestep=? THEN 1 ELSE FLOOR(((Timestep_idTimestep DIV ?) DIV ?)+1)  END as Day,sum(EMS_PVProductionEMS/3600000) as PVProd, avg(Kitchen) as KitchenT, avg(Environment) as Outdoor,sum(EMS_BuildingConsumption/3600000) as BuildingConsumption'))
+        ->setBindings([$ht,$hr,$ht,$hr,$ht,$ht,$hr,4,24,$instance_id])
+        ->groupBy('Time')
+        ->orderBy('Time','ASC')
+	    ->take(200)->get();
 	    
 		$affectedRows = Sensor::where('Timestep_Instance_idInstance', $instance_id)
 		->where('checked', 0)
 		->update(array('checked' => 1));
 		
-		return View::make('instance.results',array("instance"=>$instance_id,"results"=>$results));
+		return View::make('instance.results',array("instance"=>$instance_id,"results"=>$results,"resolution"=>$resolution,"group"=>$group));
   		
 	}
 }

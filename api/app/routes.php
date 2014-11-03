@@ -81,7 +81,7 @@ Route::group(array('before'=>'auth'),function(){
 	       'as'=>'begin-instance-form',
 		   'uses'=>'InstanceController@beginSimulationForm'
 	    ));
-	  Route::get('/show-results/{instance_id}',array(
+	  Route::get('{instance_id}/show-results/{resolution?}/{group?}',array(
 	       'as'=>'results-instance',
 		   'uses'=>'SensorController@getSensorInstance'
 	    ));
@@ -189,7 +189,7 @@ Route::group(array('before' =>'guest'),function(){
 		/*
         create action(post)
         */
-	    Route::post('/{instance_id}/{timestep_id}/setTem',array(
+	    Route::post('{instance_id}/setTemp',array(
 	       'as'=>'setTem',
 		   'uses'=>'ActionController@postSetTem'
 	    ));

@@ -10,52 +10,83 @@
 							</div>
 						</div>
 						<div class="portlet-body">
+							<div class="row">
+							{{ Form::open(array('url' => $instance.'/show-results/','method' => 'get')) }}
+	
+								<div class="col-md-8">
+									<div class="col-md-4">
+														<div class="form-group">
+															<label class="control-label col-md-3">Step</label>
+															<div class="col-md-9">
+															<select class="select2_category form-control" data-placeholder="Choose a Category" name="resolution">		
+															 <option value="1" @if($resolution==1) 
+															 					selected 
+															 				   @endif> 15 minutes</option>
+															 <option value="2" @if($resolution == 2) 
+															 					selected 
+															 					@endif> 30 minutes</option>
+															 <option value="4" @if($resolution == 4) 
+															 					selected 
+															 					@endif> 60 minutes</option>
+																</select>
+															</div>
+														</div>
+													</div>
+									
+									<div class="col-md-4">
+													<div class="form-group">
+															<label class="control-label col-md-3">Group</label>
+															<div class="col-md-9">
+															<select class="select2_category form-control" data-placeholder="Choose a Category" name="group">		
+															 <option value="24" @if($group==24)
+															 					selected 
+															 				   @endif> 1 Day</option>
+															 <option value="48"@if($group==48)
+															 					selected 
+															 				   @endif> 2 Days</option>
+															 <option value="168"@if($group==168)
+															 					selected 
+															 				   @endif> 7 Days</option>
+																</select>
+															</div>
+														</div>
+									</div>
 
-							<div class="table-toolbar">
-								<div class="btn-group">
-									<button id="sample_editable_1_new" class="btn green">
-									Add New <i class="fa fa-plus"></i>
-									</button>
+									<div class="col-md-4">
+										<input type="hidden" name="instance_id" value="{{ $instance }}">
+									{{ Form::submit('Refresh', ['class' => 'btn green btn-block']) }}
+									</div>
+									</div>
+								{{ Form::close() }}
 								</div>
-								<div class="btn-group pull-right">
-									<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-									</button>
-									<ul class="dropdown-menu pull-right">
-										<li>
-											<a href="#">
-											Print </a>
-										</li>
-										<li>
-											<a href="#">
-											Save as PDF </a>
-										</li>
-										<li>
-											<a href="#">
-											Export to Excel </a>
-										</li>
-									</ul>
-								</div>
-							</div>
+													
+								
+								
+							
+							</br></br>
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 							<tr>
-								<th class="table-checkbox">
-									<input type="checkbox" class="group-checkable" data-set="#sample_1 .checkboxes"/>
+								<th>
+									Day
 								</th>
 								<th>
-									 Timestep
+									Hour
+								</th>
+								<th>
+									 Time Step
+								</th>
+								<th>
+									 PV Prod
+								</th>
+								<th>
+									 Building kWh
+								</th>
+								<th>
+									 Kitchen/Living Temp
 								</th>
 								<th>
 									 Outdoor Temp
-								</th>
-								<th>
-									 Storage Tank Temp
-								</th>
-								<th>
-									 Bedroom Temp
-								</th>
-								<th>
-									 Electricity Consumption J
 								</th>
 								
 							</tr>
@@ -63,26 +94,31 @@
 							<tbody>
 							@foreach($results as $result)
 							<tr class="odd gradeX">
+
 								<td>
-									<input type="checkbox" class="checkboxes" value="1"/>
+									{{ $result->Day }}
 								</td>
 								<td>
-									{{ $result->Timestep_idTimestep }}
+									{{ $result->Hour }}
+								</td>
+								<td>
+									{{ $result->Time }}
 									 
 								</td>
 								<td>
-									 {{ $result->Environment }}
+									 {{ $result->PVProd }}
 									
 								</td>
+								
 								<td>
-									{{  $result->StorageTankHeating1 }}
+									 {{ $result->BuildingConsumption  }}
+								</td>
+								<td>
+									{{  $result->KitchenT}}
 									 
 								</td>
 								<td>
-									 {{ $result->Bedroom1  }}
-								</td>
-								<td class="center">
-									{{  $result->EMS_BuildingConsumption }}
+									{{  $result->Outdoor }}
 									 
 								</td>
 							</tr>
