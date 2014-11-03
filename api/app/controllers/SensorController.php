@@ -36,7 +36,7 @@ public function getSensor($instance_id,$sensor_id,$timestep_id)
 	{   
 	    $sensor = DB::table('Sensor')
 		->where('Timestep_Instance_idInstance', $instance_id)
-		->where('checked', 0)
+		//->where('checked', 0)
 		->orderBy('Timestep_idTimestep', 'DESC')
 		->take(3)->get();
 		
@@ -57,14 +57,15 @@ public function getSensor($instance_id,$sensor_id,$timestep_id)
 		
 		$instance_id = Input::get('instance_id');
 
+		/*
 		// compare with other simulations so assign the simulation id
 		$maxchecked = $name = DB::table('Sensor')
 		->where('Timestep_Instance_idInstance',$instance_id)
 		->groupBy('checked')
 		->max('checked');
+		*/
 
-
-		if (!is_numeric($maxchecked)) $maxchecked=0;
+		//if (!is_numeric($maxchecked)) $maxchecked=0;
 		if (!is_numeric($resolution)) $resolution=3;
 		if (!is_numeric($group)) $group=24;
 		$appr = $resolution;
@@ -118,6 +119,7 @@ public function getSensor($instance_id,$sensor_id,$timestep_id)
 	    ->take(300)->get();
 	    
 	    // update with max checked
+	    /*
 	    $maxchecked++;
 		$affectedRows = Sensor::where('Timestep_Instance_idInstance', $instance_id)
 		->where('checked','=', 0)
