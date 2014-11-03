@@ -61,10 +61,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'simapi',
-			'username'  => 'dbuser',
-			'password'  => '123',
+			'host'      => 'resit-db.ucd.ie',
+			'database'  => 'simapi_db1',
+			'username'  => 'simapiuser',
+			'password'  => 'pg31bd2!',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
