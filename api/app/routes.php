@@ -81,9 +81,13 @@ Route::group(array('before'=>'auth'),function(){
 	       'as'=>'begin-instance-form',
 		   'uses'=>'InstanceController@beginSimulationForm'
 	    ));
-	  Route::get('{instance_id}/show-results/{resolution?}/{group?}',array(
+	  Route::get('show-results/{resolution?}/{group?}/{instance_id?}',array(
 	       'as'=>'results-instance',
 		   'uses'=>'SensorController@getSensorInstance'
+	    ));
+	  Route::get('select-results/',array(
+	       'as'=>'select-results',
+		   'uses'=>'InstanceController@selectresults'
 	    ));
 	 Route::post('/begin-instance',array(
 	       'as'=>'postandsetbegin',

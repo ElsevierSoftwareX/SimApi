@@ -217,19 +217,43 @@ var Index = function () {
             function randValue() {
                 return (Math.floor(Math.random() * (1 + 50 - 20))) + 10;
             }
+                var visitors = [];
+                var data1 = [];
 
-            var visitors = [
-                ['02/2013', 1500],
-                ['03/2013', 2600],
-                ['04/2013', 1200],
-                ['05/2013', 560],
-                ['06/2013', 2000],
-                ['07/2013', 2350],
-                ['08/2013', 1500],
-                ['09/2013', 4700],
-                ['10/2013', 1300]
-            ];
+              //gets table
+                var oTable = document.getElementById('sample_1');
 
+                //gets rows of table
+                var rowLength = oTable.rows.length;
+
+                //loops through rows    
+                for (i = 1; i < rowLength; i++){
+
+                  //gets cells of current row  
+                   var oCells = oTable.rows.item(i).cells;
+
+                   //gets amount of cells of current row
+                   var cellLength = oCells.length;
+
+                   //loops through each cell in current row
+                   //for(var j = 0; j < cellLength; j++){
+
+                          // get your cell info here
+
+                          var valueToPush = new Array();
+                          var valueToPush2 = new Array();
+                          valueToPush[1] = Math.round(oCells.item(5).innerHTML * 100) / 100;
+                          valueToPush[0] = oCells.item(2).innerHTML;
+                          
+                          valueToPush2[1] = Math.round(oCells.item(4).innerHTML * 100) / 100;
+                          valueToPush2[0] = oCells.item(2).innerHTML;
+
+                          visitors.push(valueToPush);
+                          data1.push(valueToPush2);
+                      // }
+                }
+            
+            console.log(visitors);
 
             if ($('#site_statistics').size() != 0) {
 
@@ -249,9 +273,9 @@ var Index = function () {
                         points: {
                             show: true,
                             fill: true,
-                            radius: 5,
-                            fillColor: "#f89f9f",
-                            lineWidth: 3
+                            radius: 1,
+                            fillColor: "red",
+                            lineWidth: 1
                         },
                         color: '#fff',
                         shadowSize: 0
@@ -259,12 +283,13 @@ var Index = function () {
 
                     {
                         xaxis: {
-                            tickLength: 0,
+                            ticks: 10,
+                            tickLength: 5,
                             tickDecimals: 0,
                             mode: "categories",
                             min: 0,
                             font: {
-                                lineHeight: 14,
+                                lineHeight: 6,
                                 style: "normal",
                                 variant: "small-caps",
                                 color: "#6F7B8A"
@@ -302,7 +327,7 @@ var Index = function () {
                             var x = item.datapoint[0].toFixed(2),
                                 y = item.datapoint[1].toFixed(2);
 
-                            showChartTooltip(item.pageX, item.pageY, item.datapoint[0], item.datapoint[1] + ' visits');
+                            showChartTooltip(item.pageX, item.pageY, item.datapoint[0], item.datapoint[1] + ' C');
                         }
                     } else {
                         $("#tooltip").remove();
@@ -318,7 +343,7 @@ var Index = function () {
                 $('#site_activities_loading').hide();
                 $('#site_activities_content').show();
 
-                var data1 = [
+                /*var data1 = [
                     ['DEC', 300],
                     ['JAN', 600],
                     ['FEB', 1100],
@@ -329,7 +354,7 @@ var Index = function () {
                     ['JUL', 1800],
                     ['AUG', 1200],
                     ['SEP', 600]
-                ];
+                ];*/
 
 
                 var plot_statistics = $.plot($("#site_activities"),
@@ -346,9 +371,9 @@ var Index = function () {
                         points: {
                             show: true,
                             fill: true,
-                            radius: 4,
+                            radius: 1,
                             fillColor: "#9ACAE6",
-                            lineWidth: 2
+                            lineWidth: 1
                         },
                         color: '#9ACAE6',
                         shadowSize: 1
@@ -357,7 +382,7 @@ var Index = function () {
                         lines: {
                             show: true,
                             fill: false,
-                            lineWidth: 3
+                            lineWidth: 1
                         },
                         color: '#9ACAE6',
                         shadowSize: 0
@@ -366,9 +391,11 @@ var Index = function () {
                     {
 
                         xaxis: {
+                            ticks:10,
                             tickLength: 0,
                             tickDecimals: 0,
                             mode: "categories",
+                            axisLabel: 'bar',
                             min: 0,
                             font: {
                                 lineHeight: 18,
@@ -378,11 +405,12 @@ var Index = function () {
                             }
                         },
                         yaxis: {
-                            ticks: 5,
+                            ticks: 10,
                             tickDecimals: 0,
                             tickColor: "#eee",
+                            axisLabel: 'Barr',
                             font: {
-                                lineHeight: 14,
+                                lineHeight: 8,
                                 style: "normal",
                                 variant: "small-caps",
                                 color: "#6F7B8A"

@@ -132,9 +132,9 @@
               <span class="title">Begin Simulation</span></a>
             </li>
             <li class="active">
-              <a href="">
+              <a href="./select-results">
               <i class="icon-graph"></i>
-              <span class="title">Export Data</span></a>
+              <span class="title">Show Data</span></a>
             </li>
           </ul>
           @endif
@@ -232,6 +232,7 @@
 <script src="{{ URL::asset('assets/global/plugins/datatables/media/js/jquery.dataTables.min.js') }}"></script>
 <script src="{{ URL::asset('assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js') }}"></script>
 <script src="{{ URL::asset('assets/admin/pages/scripts/table-managed.js') }}"></script>
+<script src="{{ URL::asset('assets/javascripts/jquery.flot.axislabels.js') }}"></script>
 <!-- END PAGE LEVEL SCRIPTS -->
 <script>
 jQuery(document).ready(function() {    
