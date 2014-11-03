@@ -20,11 +20,11 @@ var TableManaged = function () {
                 "orderable": false
             }],
             "lengthMenu": [
-                [5, 15, 20, -1],
-                [5, 15, 20, "All"] // change per page values here
+                [5, 15, 20, 200,-1],
+                [5, 15, 20, 200,"All"] // change per page values here
             ],
             // set the initial value
-            "pageLength": 5,            
+            "pageLength": 200,            
             "pagingType": "bootstrap_full_number",
             "language": {
                 "lengthMenu": "  _MENU_ records",
@@ -48,7 +48,7 @@ var TableManaged = function () {
         });
 
         var tableWrapper = jQuery('#sample_1_wrapper');
-
+        /*
         table.find('.group-checkable').change(function () {
             var set = jQuery(this).attr("data-set");
             var checked = jQuery(this).is(":checked");
@@ -67,7 +67,7 @@ var TableManaged = function () {
         table.on('change', 'tbody tr .checkboxes', function () {
             $(this).parents('tr').toggleClass("active");
         });
-
+        */
         tableWrapper.find('.dataTables_length select').addClass("form-control input-xsmall input-inline"); // modify table per page dropdown
     }
 

@@ -170,7 +170,7 @@
   
 <div class="page-footer">
   <div class="page-footer-inner">
-     2014 &copy; Electricity Research Centre 
+     2014 &copy; Electricity Research Centre - <a href="https://ie.linkedin.com/in/fabianopallonetto">Fabiano Pallonetto </a>
   </div>
   <div class="page-footer-tools">
     <span class="go-top">
@@ -242,8 +242,12 @@ jQuery(document).ready(function() {
    Index.init();   
    //Index.initDashboardDaterange();
    Index.initCalendar(); // init index page's custom scripts
+   try{
    Index.initCharts(); // init index page's custom scripts
-   Index.initChat();
+   } catch(err) {
+    //
+    }
+   //Index.initChat();
    //Index.initMiniCharts();
    //Index.initIntro();
    Tasks.initDashboardWidget();
