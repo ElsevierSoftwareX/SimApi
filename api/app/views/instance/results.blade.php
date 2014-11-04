@@ -143,6 +143,9 @@
 									Hour
 								</th>
 								<th>
+									Hour
+								</th>
+								<th>
 									 Time Step
 								</th>
 								<th>
@@ -163,6 +166,9 @@
 							<tbody>
 							@foreach($results as $result)
 							<tr class="odd gradeX">
+								<td>
+									{{ $result->Hour }}
+								</td>
 								<td>
 									{{ $result->Hour }}
 								</td>
