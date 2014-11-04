@@ -140,9 +140,6 @@
 							<thead>
 							<tr>
 								<th>
-									Day
-								</th>
-								<th>
 									Hour
 								</th>
 								<th>
@@ -166,10 +163,6 @@
 							<tbody>
 							@foreach($results as $result)
 							<tr class="odd gradeX">
-
-								<td>
-									{{ $result->Day }}
-								</td>
 								<td>
 									{{ $result->Hour }}
 								</td>
