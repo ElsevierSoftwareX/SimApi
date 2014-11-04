@@ -10,9 +10,11 @@
 							</div>
 						</div>
 						<div class="portlet-body">
-							<div id="containers" style="width: 510px; height: 400px; margin: 0 auto"></div>	
-							<br/>
-							<div id="Energycontainers" style="width: 510px; height: 400px; margin: 0 auto"></div>	
+							<div id="warming" style="width: 150px; height: 200px; margin: 0 auto"></div>	
+							<div id="bigContainer" style="width: 820px; height: 300px; margin: 0 auto; display: none">
+								<div id="containers" style="width: 400px; height: 300px; float:left;"></div>	
+								<div id="Energycontainers" style="width: 400px; height: 300px;float: right"></div>	
+							</div>
 							{{--
 							<div class="table-toolbar">
 								<div class="btn-group">
@@ -95,29 +97,47 @@
 
 <script>
 var Objects = [], i;
-window.setInterval(function() {
+var firstItem = null;
+var flaq = false;
+var ajaxInterval = null;
+ajaxInterval = window.setInterval(function() {
 	$.ajax({
 		url: '/getsimlastdata/' + {{ $instance_id }},
 		success: function (json) {
 			for(i = 0; i < json.length; i++)
-			{
+			{				
+				if(firstItem == null)
+				{
+					firstItem = json[i];
+				}
+				else if(i == 0)
+				{
+					if(firstItem != null && firstItem["id"] == json[i]["id"])
+					{
+						flaq = true;
+						clearInterval(ajaxInterval); // stop the interval						
+						console.log("json[0]: "+json[i]["id"]+" = firstItem: "+firstItem["id"]);
+						console.log("flaq = "+flaq);
+					}
+					firstItem = json[0];
+				}
 				Objects.push(json[i]);
 			}
-			//console.log("Response as JS Object:") 
+			{{--console.log("Response as JS Object:") --}}
 			console.log(json);
 		}
-	//});
+	{{--});
 
-	//.done(function(response) {
-	//	var rows = response.data;
-	//	console.log(rows);
-		//for(var i = 0; i < rows.length; i++) {
-		//	var object = {
-		//		"Data1": rows[i].Data1
-		//	};
-			//$('sample1').dataTable().fnAddData(object);
-		//}
-		
+	.done(function(response) {
+		var rows = response.data;
+		console.log(rows);
+		for(var i = 0; i < rows.length; i++) {
+			var object = {
+				"Data1": rows[i].Data1
+			};
+			$('sample1').dataTable().fnAddData(object);
+		}
+		--}}
 	});
 }, 1000); 
 	
