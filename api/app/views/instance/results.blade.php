@@ -167,7 +167,7 @@
 							@foreach($results as $result)
 							<tr class="odd gradeX">
 								<td>
-									{{ $result->Hour }}
+									{{ $result->Day }}
 								</td>
 								<td>
 									{{ $result->Hour }}
