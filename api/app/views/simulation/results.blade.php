@@ -5,7 +5,7 @@
 						<div class="portlet-title">
 							<div class="caption">
 								<i class="fa fa-play font-green-sharp"></i>
-								<span class="caption-subject font-green-sharp ">Real Time Simulation {{ $instance_id }}</span>
+								<span class="caption-subject font-green-sharp ">Live simulation <div id="instnum">{{ $instance_id }}</div></span>
 								<span class="caption-helper">results</span>
 							</div>
 						</div>
