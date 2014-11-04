@@ -237,172 +237,229 @@
 <script src="http://code.highcharts.com/highcharts.js" type="text/javascript"></script>
 <script src="http://code.highcharts.com/modules/exporting.js" type="text/javascript"></script>
 <script type="text/javascript">
-     $(function () {
+    $(function () {
     $(document).ready(function () {
-        Highcharts.setOptions({
-            global: {
-                useUTC: false
-            }
-        });
-
-        $('#containers').highcharts({
-            chart: {
-                type: 'spline',
-                marginRight: 10,
-                events: {
-                    load: function () {
-                        var series = this.series[0], y; // set up the updating of the chart each second
-                        setInterval(function () {
-                            var x = (new Date()).getTime(); // current time
-							if(Objects.length > 0 && (typeof Objects[0] !== "undefined"))
-							{
-								console.log("id = " + Objects[0]["id"]);
-								var val = Number(Objects[0]["Bath1"]) + Number(Objects[0]["Bedroom1"]) + Number(Objects[0]["Bedroom2"]);
-								//var val = Number(Objects[0]["Bath1"]) + Number(Objects[0]["Bath2"]) + Number(Objects[0]["Bedroom1"]) + Number(Objects[0]["Bedroom2"]);
-								//val += Number(Objects[0]["Bedroom3"]) + Number(Objects[0]["Bedroom4"]);
-								val +=  Number(Objects[0]["Corridor"]) + Number(Objects[0]["Kitchen"]) + Number(Objects[0]["Living"]);
-								val = val/6;
-								y = val;
-								Objects.shift();
-							}
-							else
-							{
-                                y = 0;
-							}
-                            series.addPoint([x, y], true, true);
-                        }, 1500);
-                    }
-                }
-            },
-            title: {
-                text: 'Live house temperature'
-            },
-            xAxis: {
-                type: 'datetime',
-                tickPixelInterval: 150
-            },
-            yAxis: {
-                title: {
-                    text: 'Temperature'
-                },
-                plotLines: [{
-                    value: 0,
-                    width: 1,
-                    color: '#808080'
-                }]
-            },
-            tooltip: {
-                formatter: function () {
-                    return '<b>' + this.series.name + '</b><br/>' +
-                        Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) + '<br/>' +
-                        Highcharts.numberFormat(this.y, 2);
-                }
-            },
-            legend: {
-                enabled: false
-            },
-            exporting: {
-                enabled: false
-            },
-            series: [{
-                name: 'Average Temperature',
-                data: (function () {
-                    
-                    var data = [],	// generate an array of random data
-                        time = (new Date()).getTime(),
-                        i;
-
-                    for (i = -19; i <= 0; i += 1) {
-                        data.push({
-                            x: time + i * 1000,
-                            y: 0
-                        });
-                    }
-                    return data;
-                }())
-            }]
-        });
-		
-		 $('#Energycontainers').highcharts({
-            chart: {
-                type: 'spline',
-                marginRight: 10,
-                events: {
-                    load: function () {
-                        var series = this.series[0], y; // set up the updating of the chart each second
-                        setInterval(function () {
-                            var x = (new Date()).getTime(), y; // current time
-							if(Objects.length > 0 && (typeof Objects[0] !== "undefined"))
-							{
-								y = Number(Objects[0]["EMS_BuildingConsumption"]);
-								Objects.shift();
-							}
-							else
-							{
-                                y = 0;
-							}
-                            series.addPoint([x, y], true, true);
-                        }, 1500);
-                    }
-                }
-            },
-            title: {
-                text: 'House energy consumption'
-            },
-            xAxis: {
-                type: 'datetime',
-                tickPixelInterval: 150
-            },
-            yAxis: {
-                title: {
-                    text: 'Energy'
-                },
-                plotLines: [{
-                    value: 0,
-                    width: 1,
-                    color: '#808080'
-                }]
-            },
-            tooltip: {
-                formatter: function () {
-                    return '<b>' + this.series.name + '</b><br/>' +
-                        Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) + '<br/>' +
-                        Highcharts.numberFormat(this.y, 2);
-                }
-            },
-            legend: {
-                enabled: false
-            },
-            exporting: {
-                enabled: false
-            },
-            series: [{
-                name: 'Energy consumption',
-                data: (function () {
-                    
-                    var data = [],	// generate an array of random data
-                        time = (new Date()).getTime(),
-                        i;
-
-                    for (i = -19; i <= 0; i += 1) {
-                        data.push({
-                            x: time + i * 1000,
-                            y: 0
-                        });
-                    }
-                    return data;
-                }())
-            }]
-        });
+    var interval = null;
+    var warmingCounter = 0;
+    interval = setInterval(function() {
+      if(Objects.length == 0)
+      {
+        if(warmingCounter == 0)
+        {
+          $('#warming').html('<h3>Warming up .</h3>');
+          warmingCounter = 1;
+        }
+        else if(warmingCounter == 1)
+        {
+          $('#warming').html('<h3>Warming up ..</h3>');
+          warmingCounter = 2;
+        }
+        else
+        {
+          $('#warming').html('<h3>Warming up ...</h3>');
+          warmingCounter = 0;
+        }
+      }
+      else{     
+        if($('#bigContainer').css('display') == 'none')
+        {
+          $('#warming').hide();
+          $('#bigContainer').show();
+          clearInterval(interval); // stop the interval
+        }
+      }
+    }, 1000); 
+    
+    Highcharts.setOptions({
+      global: {
+        useUTC: false
+      }
     });
-});
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-1779523-7', 'auto');
-  ga('send', 'pageview');
+    $('#containers').highcharts({
+      chart: {
+        type: 'spline',
+        marginRight: 10,
+        events: {
+          load: function () {
+            var series = this.series[0], y; // set up the updating of the chart each second
+            var series2 = this.series[1], y2; // set up the updating of the chart each second
+            setInterval(function () {
+              if(flaq == true){
+                window.location.replace("http://simapi.ucd.ie/show-results?instance_id=139");
+              }
+              if(Objects.length > 0 && (typeof Objects[0] !== "undefined"))
+              {
+                y = Number(Objects[0]["Living"]);
+                y2 = Number(Objects[0]["Kitchen"]);
+                Objects.shift();
+              }
+              else
+              {
+                y = 0;
+                y2= 0;
+              }
+              series.addPoint( y, true, true);
+              series2.addPoint(y2, true, true);
+            }, 1500);
+          }
+        }
+      },
+      title: {
+        text: 'Live house temperature'
+      },
+      xAxis: {      
+        type: 'linear',
+        tickInterval: 1
+      },
+      yAxis: {
+        title: {
+          text: 'Temperature'
+        },
+        plotLines: [{
+          value: 0,
+          width: 1,
+          color: '#808080'
+        }]
+      },
+      tooltip: {
+        formatter: function () {
+          return '<b>' + this.series.name + '</b><br/>' +
+            Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', (new Date()).getTime()) + '<br/>' +
+            Highcharts.numberFormat(this.y, 2);
+        }
+      },
+      legend: {
+        enabled: true
+      },
+      exporting: {
+        enabled: false
+      },
+      series: [{
+        name: 'Living room',
+        data: (function () {
+          
+          var data = [],  // generate an array of random data
+            i;
+
+          for (i = -11; i <= 0; i += 1) {
+            data.push({
+              y: 0
+            });
+          }
+          return data;
+        }())
+      },
+      {
+        name: 'Kitchen',
+        data: (function () {
+          
+          var data = [],  // generate an array of random data
+            i;
+
+          for (i = -11; i <= 0; i += 1) {
+            data.push({
+              y: 0
+            });
+          }
+          return data;
+        }())
+      }
+      ]
+    });
+    
+    $('#Energycontainers').highcharts({
+    chart: {
+      type: 'spline',
+      marginRight: 10,
+      events: {
+        load: function () {
+          var series = this.series[0], y; // set up the updating of the chart each second
+          var series2 = this.series[1], y2; // set up the updating of the chart each second
+          setInterval(function () {
+            if(Objects.length > 0 && (typeof Objects[0] !== "undefined"))
+            {
+              y = Number(Objects[0]["EMS_BuildingConsumption"]);
+              y2 = Number(Objects[0]["EMS_PVProductionEMS"]);
+              Objects.shift();
+            }
+            else
+            {
+              y = 0;
+              y2 = 0;
+            }
+            series.addPoint(y, true, true);
+            series2.addPoint(y2, true, true);
+          }, 1500);
+        }
+      }
+    },
+    title: {
+      text: 'House energy consumption'
+    },
+    xAxis: {      
+            type: 'linear',
+            tickInterval: 1
+    },
+    yAxis: {
+      title: {
+        text: 'Energy J'
+      },
+      plotLines: [{
+        value: 0,
+        width: 1,
+        color: '#808080'
+      }]
+    },
+    tooltip: {
+      formatter: function () {
+        return '<b>' + this.series.name + '</b><br/>' +
+          Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', (new Date()).getTime()) + '<br/>' +
+          Highcharts.numberFormat(this.y, 2);
+      }
+    },
+    legend: {
+      enabled: true
+    },
+    exporting: {
+      enabled: false
+    },
+    series: [{
+      name: 'Building consumption',
+      data: (function () {
+        
+        var data = [],  // generate an array of random data
+          i;
+
+        for (i = -11; i <= 0; i += 1) {
+          data.push({
+            y: 0
+          });
+        }
+        return data;
+      }())
+    },
+    {
+      name: 'Solar Energy',
+      color: '#FFCC00',
+      data: (function () {
+        
+        var data = [],  // generate an array of random data
+          i;
+
+        for (i = -11; i <= 0; i += 1) {
+          data.push({
+            y: 0
+          });
+        }
+        return data;
+      }())
+    }
+    ]
+  });
+
+  });
+});
 </script>
 <!-- END JAVASCRIPTS -->
 </body>
