@@ -18,6 +18,8 @@ var TableManaged = function () {
                 "orderable": true
             }, {
                 "orderable": false
+            },{
+                "orderable": false
             }],
             "lengthMenu": [
                 [5, 15, 20, 200,-1],
@@ -68,7 +70,7 @@ var TableManaged = function () {
             $(this).parents('tr').toggleClass("active");
         });
         */
-        tableWrapper.find('.dataTables_length select').addClass("form-control input-xsmall input-inline"); // modify table per page dropdown
+       // tableWrapper.find('.dataTables_length select').addClass("form-control input-xsmall input-inline"); // modify table per page dropdown
     }
 
     var initTable2 = function () {
