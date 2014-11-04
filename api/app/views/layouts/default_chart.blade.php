@@ -286,7 +286,7 @@
             var series2 = this.series[1], y2; // set up the updating of the chart each second
             setInterval(function () {
               if(flaq == true){
-                window.location.replace("http://simapi.ucd.ie/show-results?instance_id="+ document.getElementById('instnum').value);
+                window.location.replace("http://simapi.ucd.ie/show-results?instance_id="+ document.getElementById('instnum').textContent);
               }
               if(Objects.length > 0 && (typeof Objects[0] !== "undefined"))
               {
