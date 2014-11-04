@@ -44,6 +44,8 @@ class InstanceController extends BaseController {
 	 	$input = Input::get();
 	    $id=(int) $input["instance_id"];
 
+	    $delete = Sensor::where('Timestep_Instance_idInstance','=',$id)->delete();
+
 	    $action = Actions::create(array(
 		           'Timestep_idTimestep' =>1,
 				   'Timestep_Instance_idInstance'=>$input["instance_id"],
