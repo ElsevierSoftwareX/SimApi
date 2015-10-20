@@ -23,9 +23,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'simapi',
+			'database'  => 'simapi_db1',
 			'username'  => 'dbuser',
-			'password'  => '123',
+			'password'  => 'Electricity1',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
