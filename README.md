@@ -9,9 +9,10 @@ It extends the functionalities of [BCVTB](https://simulationresearch.lbl.gov/bcv
 The web interace shows also a graphic dashboard for the visualisation of aggregated data. It has been tested with [EnergyPlus](https://energyplus.net/) on a calibrated smart-grid ready building model for research purposes.
 The API blueprint and the documention can be found at UCD [SimApi website](http://simapi.ucd.ie/document).
 
-The  software package is divided in two separated parts, the web platform and the mediator//actors interface. The web platform requires a webserver with the following characteristics:
+The  software package is divided in two separated parts, the web platform and the mediator//actors interface. The web platform requires a webserver (Apache o Ngnix) with the following characteristics:
 - PHP >= 5.4
 - MCrypt PHP Extension
+- MYSQL or MARIADB
 
 Further info on the server set-up and installation can be found at [Laravel 4.2](https://laravel.com/docs/4.2)
 
