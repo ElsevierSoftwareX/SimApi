@@ -11,6 +11,9 @@ The API blueprint and the documention can be found at UCD [SimApi website](http:
 The  software package is divided in two separated parts, the web platform and the mediator//actors interface. The web platform requires a webserver with the following characteristics:
 - PHP >= 5.4
 - MCrypt PHP Extension
+
 Further info on the server set-up and installation can be found at [Larave 4.2](https://laravel.com/docs/4.2)
+
+At step by step guide to install the web platform and start working with it can be found in the docs folder.
 
 The official website and the demo are at this [link >>](https://simapi.ucd.ie).
