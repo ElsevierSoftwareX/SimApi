@@ -2,6 +2,7 @@
 ![license MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 ![php version](https://img.shields.io/packagist/php-v/symfony/symfony.svg)
 ![MySQL](https://img.shields.io/badge/MYSQL-%5E5.7-green.svg)
+![Version](https://img.shields.io/badge/CURRENT%20VERSION-0.8-yellowgreen.svg)
 
 This project aims to develop a RestFul API for building energy management systems (EMS). The software architecture is developed using the combination of PHP + MySQL on top of a Laravel 4.x framework.
 It extends the functionalities of [BCVTB](https://simulationresearch.lbl.gov/bcvtb) exposing several endpoints for the control of a building simulation.
