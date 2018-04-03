@@ -1,5 +1,5 @@
 # SimApi Building Energy Co-Simulation Platform
-![license MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)
+![license MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 ![php version](https://img.shields.io/packagist/php-v/symfony/symfony.svg)
 ![MySQL](https://img.shields.io/badge/MYSQL-%5E5.7-green.svg)
 
