@@ -1,0 +1,3 @@
+[submodule "mediator"]
+	path = mediator
+	url = https://github.com/UCD-ElectricityResearchCenter/SimApi-Mediator.git
