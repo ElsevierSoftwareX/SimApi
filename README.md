@@ -8,16 +8,9 @@ It extends the functionalities of [BCVTB](https://simulationresearch.lbl.gov/bcv
 The web interace shows also a graphic dashboard for the visualisation of aggregated data. It has been tested with [EnergyPlus](https://energyplus.net/) on a calibrated smart-grid ready building model for research purposes.
 The API blueprint and the documention can be found at UCD [SimApi website](http://simapi.ucd.ie/document).
 
-The  software package is divided in two separated parts, the web platform and the mediator//actors interface. The webplatform requires 
+The  software package is divided in two separated parts, the web platform and the mediator//actors interface. The web platform requires a webserver with the following characteristics:
+- PHP >= 5.4
+- MCrypt PHP Extension
+Further info on the server set-up and installation can be found at [Larave 4.2](https://laravel.com/docs/4.2)
 
-```mermaid
-sequenceDiagram
-Alice ->> Bob: Hello Bob, how are you?
-Bob-->>John: How about you John?
-Bob--x Alice: I am good thanks!
-Bob-x John: I am good thanks!
-Note right of John: Bob thinks a long<br/>long time, so long<br/>that the text does<br/>not fit on a row.
-
-Bob-->Alice: Checking with John...
-Alice->John: Yes... John, how are you?
-```
+The official website and the demo are at this [link >>](https://simapi.ucd.ie).
