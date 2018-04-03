@@ -37,7 +37,7 @@ public function getSensor($instance_id,$sensor_id,$timestep_id)
 	    $sensor = DB::table('Sensor')
 		->where('Timestep_Instance_idInstance', $instance_id)
 		//->where('checked', 0)
-		->orderBy('Timestep_idTimestep', 'DESC')
+		->orderBy('id', 'DESC')
 		->take(3)->get();
 		
 		
