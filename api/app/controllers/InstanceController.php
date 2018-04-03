@@ -30,8 +30,8 @@ class InstanceController extends BaseController {
         //$instance = Instance::find($)
         $response=array($name);		   
 	    return $response;*/
-		 $input = Input::get();
-		 $create = Instance::create(array(
+		$input = Input::get();
+		$create = Instance::create(array(
 		           'name' =>$input['name'],
 				   'User_idUser'=>$user_id,
 				   'begin'=>0
@@ -59,8 +59,9 @@ class InstanceController extends BaseController {
 	}
 
 
-	 public function postBegin($instance_id){
+	public function postBegin($instance_id){
 	    $id=(int)$instance_id;
+		$delete = Sensor::where('Timestep_Instance_idInstance','=',$id)->delete();
 	    $instance = Instance::find($id);
 		$instance->begin=1;
 		$instance->save();
