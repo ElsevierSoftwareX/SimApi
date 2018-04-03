@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddToSensorsCheck extends Migration {
+class ChangeSensorCheck extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -14,8 +14,15 @@ class AddToSensorsCheck extends Migration {
 	{
 		 Schema::table('Sensor', function($table)
         { 
-            $table->boolean('checked');
+        	$table->dropColumn('checked');
         });
+
+		  Schema::table('Sensor', function($table)
+        { 
+        	$table->integer('checked');
+        });
+
+
 	}
 
 	/**
@@ -29,6 +36,11 @@ class AddToSensorsCheck extends Migration {
 		{
     		$table->dropColumn('checked');
 			});
+		
+		 Schema::table('Sensor', function($table)
+        { 
+        	$table->boolean('checked');
+        });
 	}
 
 }

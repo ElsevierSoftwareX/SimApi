@@ -1,22 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/classpreloader/classpreloader" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/codesleeve/asset-pipeline" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/codesleeve/sprockets" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/coffeescript/coffeescript" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/d11wtq/boris" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/filp/whoops" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/ircmaxell/password-compat" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/jeremeamia/SuperClosure" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/kriswallsmith/assetic" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/laravel/framework" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/leafo/lessphp" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/leafo/scssphp" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/monolog/monolog" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/nesbot/carbon" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/nikic/php-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/nitra/php-min" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/patchwork/utf8" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/phpseclib/phpseclib" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/predis/predis" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/richthegeek/phpsass" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/stack/builder" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/swiftmailer/swiftmailer" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/browser-kit" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/console" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/css-selector" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/debug" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/dom-crawler" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/event-dispatcher" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/filesystem" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/finder" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/http-foundation" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/http-kernel" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/process" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/routing" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/security-core" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/translation" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/way/generators" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library">
-      <library name="PHARS">
-        <CLASSES>
-          <root url="phar://$MODULE_DIR$/api/go-pear.phar" />
-          <root url="phar://$MODULE_DIR$/api/composer.phar" />
-          <root url="phar://$MODULE_DIR$/api/pdepend.phar" />
-        </CLASSES>
-        <SOURCES>
-          <root url="phar://$MODULE_DIR$/api/go-pear.phar" />
-          <root url="phar://$MODULE_DIR$/api/composer.phar" />
-          <root url="phar://$MODULE_DIR$/api/pdepend.phar" />
-        </SOURCES>
-      </library>
-    </orderEntry>
   </component>
 </module>

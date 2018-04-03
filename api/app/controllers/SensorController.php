@@ -18,14 +18,14 @@ public function getSensor($instance_id,$sensor_id,$timestep_id)
 		->where('Timestep_Instance_idInstance', $instance_id)
 		->first();
 		if ($sensor){
-		  $TOut=$sensor->TOut;
-		  $TRoom=$sensor->TRoom;
 	      return Response::json(array(
-		  'Sensor_id' => $sensor_id,
 	      'Timestep' => $timestep_id,
 		  'Instance_id'=> $instance_id,
-	      'Temperature_out' => $TOut,
-		  'Temperature_room' => $TRoom
+	      'Tank_Temperature' => $sensor->StorageTankHeating1,
+	      'Energy_Consumption' => $sensor->EMS_BuildingConsumption,
+	      'Green_Energy' => $sensor->EMS_PVProductionEMS,
+		  'Inside_Temperature'	=> $sensor->Living,
+		  'Pump_Energy'	=> $sensor->Study
 		  ));
 		  }
 		  return "Sensor Not found"; 

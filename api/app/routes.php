@@ -193,8 +193,8 @@ Route::group(array('before' =>'guest'),function(){
 		/*
         create action(post)
         */
-	    Route::post('{instance_id}/setTemp',array(
-	       'as'=>'setTem',
+	    Route::post('/{instance_id}/setTemp',array(
+	       'as'=>'setTemp',
 		   'uses'=>'ActionController@postSetTem'
 	    ));
 	 
