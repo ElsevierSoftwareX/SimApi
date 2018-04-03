@@ -2,166 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53a11e63-3918-457c-b0f1-7337827e95bc" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/htdocs/picture/simapi.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/simapi.png" />
       <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/simapi.iml" afterPath="$PROJECT_DIR$/.idea/simapi.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/api/.gitattributes" afterPath="$PROJECT_DIR$/api/.gitattributes" />
-      <change beforePath="$PROJECT_DIR$/api/.gitignore" afterPath="$PROJECT_DIR$/api/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/api/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/api/CONTRIBUTING.md" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/css/font-awesome.css" afterPath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/css/font-awesome.css" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/css/font-awesome.min.css" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/fonts/FontAwesome.otf" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/fonts/fontawesome-webfont.eot" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/fonts/fontawesome-webfont.svg" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/fonts/fontawesome-webfont.ttf" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/fonts/fontawesome-webfont.woff" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/less/bordered-pulled.less" afterPath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/less/bordered-pulled.less" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/less/core.less" afterPath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/less/core.less" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/less/fixed-width.less" afterPath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/less/fixed-width.less" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/less/font-awesome.less" afterPath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/less/font-awesome.less" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/less/icons.less" afterPath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/less/icons.less" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/less/larger.less" afterPath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/less/larger.less" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/less/list.less" afterPath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/less/list.less" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/less/mixins.less" afterPath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/less/mixins.less" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/less/path.less" afterPath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/less/path.less" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/less/rotated-flipped.less" afterPath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/less/rotated-flipped.less" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/less/spinning.less" afterPath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/less/spinning.less" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/less/stacked.less" afterPath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/less/stacked.less" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/less/variables.less" afterPath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/less/variables.less" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/scss/_bordered-pulled.scss" afterPath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/scss/_bordered-pulled.scss" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/scss/_core.scss" afterPath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/scss/_core.scss" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/scss/_fixed-width.scss" afterPath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/scss/_fixed-width.scss" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/scss/_icons.scss" afterPath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/scss/_icons.scss" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/scss/_larger.scss" afterPath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/scss/_larger.scss" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/scss/_list.scss" afterPath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/scss/_list.scss" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/scss/_mixins.scss" afterPath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/scss/_mixins.scss" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/scss/_path.scss" afterPath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/scss/_path.scss" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/scss/_rotated-flipped.scss" afterPath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/scss/_rotated-flipped.scss" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/scss/_spinning.scss" afterPath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/scss/_spinning.scss" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/scss/_stacked.scss" afterPath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/scss/_stacked.scss" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/scss/_variables.scss" afterPath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/scss/_variables.scss" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/scss/font-awesome.scss" afterPath="$PROJECT_DIR$/api/app/assets/global/plugins/font-awesome/scss/font-awesome.scss" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/global/plugins/slider-layer-slider/skins/noskin/skin (1).png" afterPath="$PROJECT_DIR$/api/app/assets/global/plugins/slider-layer-slider/skins/noskin/skin (1).png" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/images/bar-graph-clipart.png" afterPath="$PROJECT_DIR$/api/app/assets/images/bar-graph-clipart.png" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/images/heating_setpoint.png" afterPath="$PROJECT_DIR$/api/app/assets/images/heating_setpoint.png" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/images/heating_setpoint_web.png" afterPath="$PROJECT_DIR$/api/app/assets/images/heating_setpoint_web.png" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/images/readme.txt" afterPath="$PROJECT_DIR$/api/app/assets/images/readme.txt" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/images/realimageopt.jpg" afterPath="$PROJECT_DIR$/api/app/assets/images/realimageopt.jpg" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/api/app/assets/javascripts/application.js" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/javascripts/jquery.flot.axislabels.js" afterPath="$PROJECT_DIR$/api/app/assets/javascripts/jquery.flot.axislabels.js" />
-      <change beforePath="$PROJECT_DIR$/api/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/api/app/assets/stylesheets/application.css" />
-      <change beforePath="$PROJECT_DIR$/api/app/commands/.gitkeep" afterPath="$PROJECT_DIR$/api/app/commands/.gitkeep" />
-      <change beforePath="$PROJECT_DIR$/api/app/config/app.php" afterPath="$PROJECT_DIR$/api/app/config/app.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/config/auth.php" afterPath="$PROJECT_DIR$/api/app/config/auth.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/config/cache.php" afterPath="$PROJECT_DIR$/api/app/config/cache.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/config/compile.php" afterPath="$PROJECT_DIR$/api/app/config/compile.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/config/database.php" afterPath="$PROJECT_DIR$/api/app/config/database.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/config/local/app.php" afterPath="$PROJECT_DIR$/api/app/config/local/app.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/config/local/database.php" afterPath="$PROJECT_DIR$/api/app/config/local/database.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/config/mail.php" afterPath="$PROJECT_DIR$/api/app/config/mail.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/config/packages/.gitkeep" afterPath="$PROJECT_DIR$/api/app/config/packages/.gitkeep" />
-      <change beforePath="$PROJECT_DIR$/api/app/config/packages/codesleeve/asset-pipeline/config.php" afterPath="$PROJECT_DIR$/api/app/config/packages/codesleeve/asset-pipeline/config.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/config/queue.php" afterPath="$PROJECT_DIR$/api/app/config/queue.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/config/remote.php" afterPath="$PROJECT_DIR$/api/app/config/remote.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/config/services.php" afterPath="$PROJECT_DIR$/api/app/config/services.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/config/session.php" afterPath="$PROJECT_DIR$/api/app/config/session.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/config/testing/cache.php" afterPath="$PROJECT_DIR$/api/app/config/testing/cache.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/config/testing/session.php" afterPath="$PROJECT_DIR$/api/app/config/testing/session.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/config/view.php" afterPath="$PROJECT_DIR$/api/app/config/view.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/config/workbench.php" afterPath="$PROJECT_DIR$/api/app/config/workbench.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/controllers/.gitkeep" afterPath="$PROJECT_DIR$/api/app/controllers/.gitkeep" />
-      <change beforePath="$PROJECT_DIR$/api/app/controllers/AccountsController.php" afterPath="$PROJECT_DIR$/api/app/controllers/AccountsController.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/controllers/ActionController.php" afterPath="$PROJECT_DIR$/api/app/controllers/ActionController.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/controllers/BaseController.php" afterPath="$PROJECT_DIR$/api/app/controllers/BaseController.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/controllers/HomeController.php" afterPath="$PROJECT_DIR$/api/app/controllers/HomeController.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/controllers/InstanceController.php" afterPath="$PROJECT_DIR$/api/app/controllers/InstanceController.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/controllers/ProfileController.php" afterPath="$PROJECT_DIR$/api/app/controllers/ProfileController.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/controllers/SensorController.php" afterPath="$PROJECT_DIR$/api/app/controllers/SensorController.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/database/migrations/.gitkeep" afterPath="$PROJECT_DIR$/api/app/database/migrations/.gitkeep" />
-      <change beforePath="$PROJECT_DIR$/api/app/database/migrations/2014_07_24_132558_add_to_users.php" afterPath="$PROJECT_DIR$/api/app/database/migrations/2014_07_24_132558_add_to_users.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/database/migrations/2014_08_10_103907_set_instance.php" afterPath="$PROJECT_DIR$/api/app/database/migrations/2014_08_10_103907_set_instance.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/database/migrations/2014_08_10_114546_add_result.php" afterPath="$PROJECT_DIR$/api/app/database/migrations/2014_08_10_114546_add_result.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/database/migrations/2014_09_01_035351_get_sensor.php" afterPath="$PROJECT_DIR$/api/app/database/migrations/2014_09_01_035351_get_sensor.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/database/migrations/2014_10_21_132558_alter_sensor_table.php" afterPath="$PROJECT_DIR$/api/app/database/migrations/2014_10_21_132558_alter_sensor_table.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/database/migrations/2014_10_21_345644_results_view.php" afterPath="$PROJECT_DIR$/api/app/database/migrations/2014_10_21_345644_results_view.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/database/migrations/2014_10_21_7644_action_table.php" afterPath="$PROJECT_DIR$/api/app/database/migrations/2014_10_21_7644_action_table.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/database/migrations/2014_11_01_132558_add_to_sensors_check.php" afterPath="$PROJECT_DIR$/api/app/database/migrations/2014_11_01_132558_add_to_sensors_check.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/database/migrations/2014_11_02_132328_change_sensor_check.php" afterPath="$PROJECT_DIR$/api/app/database/migrations/2014_11_02_132328_change_sensor_check.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/database/migrations/2014_11_02_132328_change_sensor_checked.php" afterPath="$PROJECT_DIR$/api/app/database/migrations/2014_11_02_132328_change_sensor_checked.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/database/migrations/2014_11_02_231128_sensor_remove_checked.php" afterPath="$PROJECT_DIR$/api/app/database/migrations/2014_11_02_231128_sensor_remove_checked.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/database/production.sqlite" afterPath="$PROJECT_DIR$/api/app/database/production.sqlite" />
-      <change beforePath="$PROJECT_DIR$/api/app/database/seeds/.gitkeep" afterPath="$PROJECT_DIR$/api/app/database/seeds/.gitkeep" />
-      <change beforePath="$PROJECT_DIR$/api/app/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/api/app/database/seeds/DatabaseSeeder.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/filters.php" afterPath="$PROJECT_DIR$/api/app/filters.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/lang/en/pagination.php" afterPath="$PROJECT_DIR$/api/app/lang/en/pagination.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/lang/en/reminders.php" afterPath="$PROJECT_DIR$/api/app/lang/en/reminders.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/lang/en/validation.php" afterPath="$PROJECT_DIR$/api/app/lang/en/validation.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/lib/Transformer/InstanceTransformer.php" afterPath="$PROJECT_DIR$/api/app/lib/Transformer/InstanceTransformer.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/models/Actions.php" afterPath="$PROJECT_DIR$/api/app/models/Actions.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/models/Appliance.php" afterPath="$PROJECT_DIR$/api/app/models/Appliance.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/models/EP_Instance.php" afterPath="$PROJECT_DIR$/api/app/models/EP_Instance.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/models/Electric_Price.php" afterPath="$PROJECT_DIR$/api/app/models/Electric_Price.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/models/Instance.php" afterPath="$PROJECT_DIR$/api/app/models/Instance.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/models/Result.php" afterPath="$PROJECT_DIR$/api/app/models/Result.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/models/Sensor.php" afterPath="$PROJECT_DIR$/api/app/models/Sensor.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/models/Timestep.php" afterPath="$PROJECT_DIR$/api/app/models/Timestep.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/models/User.php" afterPath="$PROJECT_DIR$/api/app/models/User.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/routes.php" afterPath="$PROJECT_DIR$/api/app/routes.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/start/artisan.php" afterPath="$PROJECT_DIR$/api/app/start/artisan.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/start/global.php" afterPath="$PROJECT_DIR$/api/app/start/global.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/start/local.php" afterPath="$PROJECT_DIR$/api/app/start/local.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/tests/ExampleTest.php" afterPath="$PROJECT_DIR$/api/app/tests/ExampleTest.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/tests/TestCase.php" afterPath="$PROJECT_DIR$/api/app/tests/TestCase.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/views/accounts/activate.blade.php" afterPath="$PROJECT_DIR$/api/app/views/accounts/activate.blade.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/views/accounts/create.blade.php" afterPath="$PROJECT_DIR$/api/app/views/accounts/create.blade.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/views/accounts/forgot.blade.php" afterPath="$PROJECT_DIR$/api/app/views/accounts/forgot.blade.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/views/accounts/login.blade.php" afterPath="$PROJECT_DIR$/api/app/views/accounts/login.blade.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/views/accounts/password.blade.php" afterPath="$PROJECT_DIR$/api/app/views/accounts/password.blade.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/views/emails/auth/forgot.blade.php" afterPath="$PROJECT_DIR$/api/app/views/emails/auth/forgot.blade.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/views/emails/auth/reminder.blade.php" afterPath="$PROJECT_DIR$/api/app/views/emails/auth/reminder.blade.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/views/hello.blade.php" afterPath="$PROJECT_DIR$/api/app/views/hello.blade.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/views/instance/begin.blade.php" afterPath="$PROJECT_DIR$/api/app/views/instance/begin.blade.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/views/instance/create.blade.php" afterPath="$PROJECT_DIR$/api/app/views/instance/create.blade.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/views/instance/create_instance.blade.php" afterPath="$PROJECT_DIR$/api/app/views/instance/create_instance.blade.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/views/instance/results.blade.php" afterPath="$PROJECT_DIR$/api/app/views/instance/results.blade.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/views/layouts/default.blade.php" afterPath="$PROJECT_DIR$/api/app/views/layouts/default.blade.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/views/layouts/default_chart.blade.php" afterPath="$PROJECT_DIR$/api/app/views/layouts/default_chart.blade.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/views/layouts/default_old.blade.php" afterPath="$PROJECT_DIR$/api/app/views/layouts/default_old.blade.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/views/layouts/document.blade.php" afterPath="$PROJECT_DIR$/api/app/views/layouts/document.blade.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/views/layouts/instance.blade.php" afterPath="$PROJECT_DIR$/api/app/views/layouts/instance.blade.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/views/profile/user.blade.php" afterPath="$PROJECT_DIR$/api/app/views/profile/user.blade.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/views/simulation/results.blade.php" afterPath="$PROJECT_DIR$/api/app/views/simulation/results.blade.php" />
-      <change beforePath="$PROJECT_DIR$/api/app/views/simulation/select.blade.php" afterPath="$PROJECT_DIR$/api/app/views/simulation/select.blade.php" />
-      <change beforePath="$PROJECT_DIR$/api/artisan" afterPath="$PROJECT_DIR$/api/artisan" />
-      <change beforePath="$PROJECT_DIR$/api/bootstrap/autoload.php" afterPath="$PROJECT_DIR$/api/bootstrap/autoload.php" />
-      <change beforePath="$PROJECT_DIR$/api/bootstrap/paths.php" afterPath="$PROJECT_DIR$/api/bootstrap/paths.php" />
-      <change beforePath="$PROJECT_DIR$/api/bootstrap/start.php" afterPath="$PROJECT_DIR$/api/bootstrap/start.php" />
-      <change beforePath="$PROJECT_DIR$/api/composer.json" afterPath="$PROJECT_DIR$/api/composer.json" />
-      <change beforePath="$PROJECT_DIR$/api/go-pear.phar" afterPath="$PROJECT_DIR$/api/go-pear.phar" />
-      <change beforePath="$PROJECT_DIR$/api/jdepend.svg" afterPath="$PROJECT_DIR$/api/jdepend.svg" />
-      <change beforePath="$PROJECT_DIR$/api/phpunit.xml" afterPath="$PROJECT_DIR$/api/phpunit.xml" />
-      <change beforePath="$PROJECT_DIR$/api/provider/assets/javascripts/jquery.min.js" afterPath="$PROJECT_DIR$/api/provider/assets/javascripts/jquery.min.js" />
-      <change beforePath="$PROJECT_DIR$/api/provider/assets/stylesheets/readme.txt" afterPath="$PROJECT_DIR$/api/provider/assets/stylesheets/readme.txt" />
-      <change beforePath="$PROJECT_DIR$/api/pyramid.svg" afterPath="$PROJECT_DIR$/api/pyramid.svg" />
-      <change beforePath="$PROJECT_DIR$/api/readme.md" afterPath="$PROJECT_DIR$/api/readme.md" />
-      <change beforePath="$PROJECT_DIR$/api/server.php" afterPath="$PROJECT_DIR$/api/server.php" />
-      <change beforePath="$PROJECT_DIR$/api/sum.xml" afterPath="$PROJECT_DIR$/api/sum.xml" />
-      <change beforePath="$PROJECT_DIR$/api/summary.xml" afterPath="$PROJECT_DIR$/api/summary.xml" />
-      <change beforePath="$PROJECT_DIR$/default/adminer/index.php" afterPath="$PROJECT_DIR$/default/adminer/index.php" />
-      <change beforePath="$PROJECT_DIR$/htdocs/.htaccess" afterPath="$PROJECT_DIR$/htdocs/.htaccess" />
-      <change beforePath="$PROJECT_DIR$/htdocs/api_doc.html" afterPath="$PROJECT_DIR$/htdocs/api_doc.html" />
-      <change beforePath="$PROJECT_DIR$/htdocs/assettti/global/plugins/slider-layer-slider/skins/noskin/skin (1).png" afterPath="$PROJECT_DIR$/htdocs/assettti/global/plugins/slider-layer-slider/skins/noskin/skin (1).png" />
-      <change beforePath="$PROJECT_DIR$/htdocs/favicon.ico" afterPath="$PROJECT_DIR$/htdocs/favicon.ico" />
-      <change beforePath="$PROJECT_DIR$/htdocs/index.php" afterPath="$PROJECT_DIR$/htdocs/index.php" />
-      <change beforePath="$PROJECT_DIR$/htdocs/index1.html" afterPath="$PROJECT_DIR$/htdocs/index1.html" />
-      <change beforePath="$PROJECT_DIR$/htdocs/packages/.gitkeep" afterPath="$PROJECT_DIR$/htdocs/packages/.gitkeep" />
-      <change beforePath="$PROJECT_DIR$/htdocs/picture/book.jpg" afterPath="$PROJECT_DIR$/htdocs/picture/book.jpg" />
-      <change beforePath="$PROJECT_DIR$/htdocs/robots.txt" afterPath="$PROJECT_DIR$/htdocs/robots.txt" />
-      <change beforePath="$PROJECT_DIR$/html/index.html" afterPath="$PROJECT_DIR$/html/index.html" />
-      <change beforePath="$PROJECT_DIR$/laravel" afterPath="$PROJECT_DIR$/laravel" />
     </list>
     <ignored path="simapi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -254,17 +96,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="30">
+              <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2014_11_02_132328_change_sensor_check.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2014_11_02_132328_change_sensor_check.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/app/database/migrations/2014_11_02_132328_change_sensor_check.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -457,12 +299,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1505542504284</updated>
-      <workItem from="1522741348698" duration="129000" />
+      <workItem from="1522741348698" duration="217000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129000" />
+    <option name="totallyTimeSpent" value="217000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-14" y="49" width="1440" height="877" extended-state="0" />
@@ -692,22 +534,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/app/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="189" column="40" lean-forward="false" selection-start-line="189" selection-start-column="40" selection-end-line="189" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/app/database/migrations/2014_10_21_132558_alter_sensor_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-585">
@@ -728,6 +554,22 @@
           <folding>
             <element signature="e#7#48#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="189" column="40" lean-forward="false" selection-start-line="189" selection-start-column="40" selection-end-line="189" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
