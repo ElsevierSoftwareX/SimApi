@@ -13,7 +13,7 @@ The  software package is divided in two separated parts, the web platform and th
 - PHP >= 5.4
 - MCrypt PHP Extension
 
-Further info on the server set-up and installation can be found at [Larave 4.2](https://laravel.com/docs/4.2)
+Further info on the server set-up and installation can be found at [Laravel 4.2](https://laravel.com/docs/4.2)
 
 At step by step guide to install the web platform and start working with it can be found in the docs folder.
 
